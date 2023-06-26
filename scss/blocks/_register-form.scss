@@ -1,0 +1,66 @@
+.block-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding-top: 20px !important;
+
+  .rf-body {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 28px !important;
+    font-family: Open Sans;
+    font-weight: 700;
+    margin: 0 !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+.step-form {
+  flex-shrink: 0;
+  animation: fade 0.3s ease-in-out;
+}
+
+.steps-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  .step-prev {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: none;
+    color: #333;
+    text-align: center;
+    font-size: 14px;
+    font-family: Open Sans;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid #f48c7f;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
+// плавное появление контента через анимацию
+// animation: fade 0.3s ease-in-out; (задать элементу который нужно показывать плавно;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

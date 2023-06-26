@@ -1,0 +1,106 @@
+.custom-select {
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+
+  &::after {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 6px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggaWQ9ImU2OWVmNjE0IiBvcGFjaXR5PSIwLjciIGQ9Ik0xMCAwSDBMNSA2TDEwIDBaIiBmaWxsPSIjNEY0RjRGIj48L3BhdGg+Cjwvc3ZnPg==")
+      no-repeat center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.custom-select__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 25px;
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  font: 16px/130% "Open Sans", sans-serif;
+  color: #333333;
+  transition: all 0.1s ease-in-out;
+}
+
+.custom-select__options {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 32px 0px rgba(37, 46, 64, 0.35);
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-select__option {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(#000, 0.12);
+  }
+
+  &:hover {
+    color: #fff;
+    background: #f48c7f;
+    &:not(:last-child) {
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+// Открытие селекта
+.custom-select.active .custom-select__options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  animation: animOptions 0.3s ease 0s 1 normal forwards;
+}
+
+.custom-select.active::after {
+  transform: rotateX(180deg) translateY(50%);
+}
+
+.custom-select.active .custom-select__input {
+  background: #fff;
+  border: 1px solid #f48c7f;
+}
+
+@keyframes animOptions {
+  0% {
+    transform: rotateX(70deg);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+
+.select-gender {
+  z-index: 200;
+}

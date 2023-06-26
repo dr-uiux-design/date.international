@@ -1,0 +1,63 @@
+.gender-radiogroup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.gender-radio {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    opacity: 0.6;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .ava-male {
+    border: 2px solid transparent;
+  }
+
+  .ava-female {
+    border: 2px solid transparent;
+  }
+
+  &__name {
+    color: $color_black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
+
+.gender-radio__input:checked + .gender-radio__img {
+  opacity: 1;
+  transform: scale(1.09);
+}
+
+.gender-radio__input:checked + .ava-male {
+  border: 2px solid #29abe2;
+}
+
+.gender-radio__input:checked + .ava-female {
+  border: 2px solid #ed1e79;
+}

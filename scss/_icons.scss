@@ -1,0 +1,115 @@
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?841hfd');
+	src:  url('../fonts/icomoon.eot?841hfd#iefix') format('embedded-opentype'),
+	url('../fonts/icomoon.ttf?841hfd') format('truetype'),
+	url('../fonts/icomoon.woff?841hfd') format('woff'),
+	url('../fonts/icomoon.svg?841hfd#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-link:before {
+	content: "\e919";
+}
+.icon-page-next:before {
+	content: "\e917";
+}
+.icon-page-prev:before {
+	content: "\e918";
+}
+.icon-arrow-bottom:before {
+	content: "\e916";
+}
+.icon-arrow-left:before {
+	content: "\e908";
+}
+.icon-arrow-right:before {
+	content: "\e909";
+}
+.icon-arrow-top:before {
+	content: "\e90a";
+}
+.icon-google-color .path1:before {
+	content: "\e90b";
+	color: rgb(255, 193, 7);
+}
+.icon-google-color .path2:before {
+	content: "\e90c";
+	margin-left: -1em;
+	color: rgb(255, 61, 0);
+}
+.icon-google-color .path3:before {
+	content: "\e90d";
+	margin-left: -1em;
+	color: rgb(76, 175, 80);
+}
+.icon-google-color .path4:before {
+	content: "\e90e";
+	margin-left: -1em;
+	color: rgb(25, 118, 210);
+}
+.icon-home:before {
+	content: "\e911";
+}
+.icon-view:before {
+	content: "\e913";
+}
+.icon-chat:before {
+	content: "\e901";
+}
+.icon-email:before {
+	content: "\e902";
+}
+.icon-gift:before {
+	content: "\e903";
+}
+.icon-plus:before {
+	content: "\e904";
+}
+.icon-prof:before {
+	content: "\e905";
+}
+.icon-star:before {
+	content: "\e906";
+}
+.icon-zoom:before {
+	content: "\e907";
+}
+.icon-search:before {
+	content: "\e915";
+}
+.icon-quote-right:before {
+	content: "\e900";
+}
+.icon-user:before {
+	content: "\e914";
+}
+.icon-facebook:before {
+	content: "\e90f";
+}
+.icon-facebook-f:before {
+	content: "\e90f";
+}
+.icon-camera:before {
+	content: "\e910";
+}
+.icon-location:before {
+	content: "\e912";
+}

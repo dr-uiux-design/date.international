@@ -1,0 +1,208 @@
+.profile-list {
+  list-style-position: outside;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+
+  &__link {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 120px auto;
+    gap: 20px;
+  }
+
+  &__item {
+    background: $color_white;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.09);
+
+      .pl-pic .pl-view {
+        opacity: 1;
+      }
+    }
+
+    .pl-pic {
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+      display: block;
+      text-decoration: none;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .pl-view {
+        transition: all 0.3s linear;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: $color_white;
+      }
+
+      .pl-photo {
+        position: absolute;
+        bottom: 11px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+        min-width: 60px;
+        height: 26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3px;
+        border-radius: 13px;
+        background: rgba(0, 0, 0, 0.4);
+        font: 600 13px/130% $font_main;
+        color: $color_white;
+
+        span {
+          margin-right: 5px;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .pl-cont {
+      width: 100%;
+      min-width: 10px;
+      max-width: 100%;
+
+      .pl-data {
+        padding-bottom: 15px;
+        margin-bottom: 17px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      }
+
+      .pl-name {
+        margin-bottom: 12px;
+        font: bold 18px/130% $font_main;
+        color: $color_primary;
+
+        span {
+          color: $color-black;
+        }
+      }
+
+      .pl-info {
+        display: inline-block;
+        font: 15px/130% $font_main;
+        color: $color-grey_3;
+        position: relative;
+        padding-left: 22px;
+
+        &:before {
+          font-family: "icomoon" !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          position: absolute;
+          left: 0;
+          top: 2px;
+          color: $color_primary;
+          content: "\e912";
+        }
+      }
+
+      .pl-text {
+        margin-bottom: 16px;
+        height: 40px;
+        overflow: hidden;
+        font: italic 15px/130% $font_main;
+        color: $color-grey_3;
+      }
+
+      .pl-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .pl-status {
+          padding-left: 20px;
+          position: relative;
+          font: 13px/130% $font_main;
+          color: $color_main;
+
+          &.status-online:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $color-green;
+          }
+        }
+
+        .pl-more {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          width: 32px;
+          height: 32px;
+          background: $color-gradient_2;
+          box-shadow: 0px 4px 10px rgba(244, 140, 127, 0.5);
+          font-size: 12px;
+          color: $color_white;
+          line-height: 1;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+
+          &:hover:before {
+            opacity: 0;
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: $color-gradient_1;
+            transition: all 300ms linear;
+          }
+
+          span {
+            position: relative;
+            z-index: 2;
+            margin-left: 3px;
+            margin-top: 1px;
+          }
+        }
+      }
+    }
+  }
+}
