@@ -756,6 +756,12 @@
   .route {
     padding: 15px 0;
   }
+
+  .logo {
+    span {
+      display: block;
+    }
+  }
 }
 
 @include media(410) {
@@ -842,8 +848,6 @@
   }
 
   .privacy-policy {
-    margin: 15px -15px 0 -15px;
-    padding: 10px 15px 8px 15px;
     font-size: 12px;
   }
 

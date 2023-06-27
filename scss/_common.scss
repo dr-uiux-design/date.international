@@ -7,6 +7,11 @@ body {
   position: relative;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 #site {
   min-width: 320px;
   overflow: hidden;
@@ -349,7 +354,7 @@ body {
       box-shadow: 0px 10px 30px rgba(43, 50, 63, 0.25);
       border-radius: 10px;
       background: none;
-      z-index: 999;
+      z-index: 1000;
 
       li {
         position: relative;
@@ -1958,9 +1963,7 @@ div.btn {
 }
 
 .privacy-policy {
-  margin: 15px -30px 0 -30px;
-  padding: 15px 30px 11px 30px;
-  background: #f5f6f8;
+  margin-top: 20px;
   text-align: center;
   font: 14px/130% $font_main;
   color: $color_main;
